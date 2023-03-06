@@ -1,8 +1,12 @@
 #include <iostream>
 #include <chrono>
+#include <wchar.h>
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
 #include "wielomian.h"
 
-int main()
+int main(int argc, char** argv)
 {
   Programowanie_obiektowe::Wielomian w1(10, {11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1});
   float equation;
@@ -26,5 +30,7 @@ int main()
             << horner << std::endl
             << equation;
 
+  _getch();
+  _getch();
   return EXIT_SUCCESS;
 }
