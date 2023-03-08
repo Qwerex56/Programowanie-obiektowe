@@ -1,14 +1,12 @@
-#include <iostream>
-#include <chrono>
-#include <wchar.h>
-#include <stdio.h>
 #include <windows.h>
 #include <conio.h>
+#include <iostream>
+#include <chrono>
 #include "wielomian.h"
 
 int main(int argc, char** argv)
 {
-  Programowanie_obiektowe::Wielomian w1(10, {11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1});
+  Programowanie_obiektowe::Wielomian w1(1, {11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1});
   float equation;
   float horner;
 
