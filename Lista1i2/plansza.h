@@ -6,8 +6,11 @@
 class Board {
 public:
   Board();
+  Board(const Board &);
   Board(int, int);
   ~Board();
+
+  const Board& operator=(const Board &);
 
   constexpr int Width() const;
   constexpr int Height() const;
@@ -16,8 +19,8 @@ public:
   constexpr int Get(int, int) const;
 
   friend std::ostream& operator<<(std::ostream& os, Board& b) {
-    for (size_t y = 0; y < b.width; y++) {
-      for (size_t x = 0; x < b.height; x++) {
+    for (size_t y = 0; y < b.height; y++) {
+      for (size_t x = 0; x < b.width; x++) {
         os << b.Get(x, y) << " ";
       }
       os << std::endl;
@@ -29,6 +32,9 @@ private:
   int **board;
   int height = 1; //x
   int width  = 1; //y
+
+  int **CreteBoard() const;
+  void DeleteBoard() const; // Use with Create Board
 };
 
 #endif
