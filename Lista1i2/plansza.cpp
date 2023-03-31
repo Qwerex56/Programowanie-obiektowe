@@ -11,8 +11,8 @@ Board::Board(const Board &b){
   height = b.height;
 
   board = CreteBoard();
-  for (size_t y = 0; y < height; y++) {
-    for (size_t x = 0; x < width; x++) {
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
       board[y][x] = b.board[y][x];
     }
   }
@@ -39,8 +39,8 @@ const Board& Board::operator=(const Board &b) {
   height = b.height;
 
   board = CreteBoard();
-  for (size_t y = 0; y < height; y++) {
-    for (size_t x = 0; x < width; x++) {
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
       board[y][x] = b.board[y][x];
     }
   }
@@ -48,13 +48,13 @@ const Board& Board::operator=(const Board &b) {
   return *this;
 }
 
-const bool Board::operator==(const Board &b) const {
+bool Board::operator==(const Board &b) const {
   if (this->height != b.height || this->width != b.width) {
     return false;
   }
 
-  for (size_t y = 0; y < this->height; y++) {
-    for (size_t x = 0; x < this->width; x++) {
+  for (int y = 0; y < this->height; y++) {
+    for (int x = 0; x < this->width; x++) {
       if (this->board[y][x] != b.board[y][x]) {
         return false;
       }
@@ -63,15 +63,15 @@ const bool Board::operator==(const Board &b) const {
   return true;
 }
 
-constexpr int Board::Width() const {
+int Board::Width() const {
   return width;
 }
 
-constexpr int Board::Height() const {
+int Board::Height() const {
   return height;
 }
 
-constexpr int Board::Get(int x, int y) const {
+int Board::Get(int x, int y) const {
   if (x >= width || y >= height || x < 0 || y < 0)
     throw std::runtime_error("X or Y out of array bounds");
 
@@ -91,22 +91,22 @@ void Board::Set(int x, int y, int val) {
 }
 
 int** Board::CreteBoard() const {
-  int** board = new int *[height];
-  for (size_t i = 0; i < height; i++) {
-    board[i] = new int[width];
+  int** newBoard = new int *[height];
+  for (int i = 0; i < height; i++) {
+    newBoard[i] = new int[width];
   }
 
-  for (size_t y = 0; y < height; y++) {
-    for (size_t x = 0; x < width; x++) {
-      board[y][x] = 0;
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      newBoard[y][x] = 0;
     }
   }
 
-  return board;
+  return newBoard;
 }
 
 void Board::DeleteBoard() const {
-  for (size_t y = height - 1; y >= 0; y--) {
+  for (int y = height - 1; y >= 0; y--) {
     delete[] board[y];
   }
 

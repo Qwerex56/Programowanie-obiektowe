@@ -11,17 +11,17 @@ public:
   ~Board();
 
   const Board& operator=(const Board &);
-  const bool operator==(const Board &) const;
+  bool operator==(const Board &) const;
 
-  constexpr int Width() const;
-  constexpr int Height() const;
+  int Width() const;
+  int Height() const;
 
   void Set(int, int, int);
-  constexpr int Get(int, int) const;
+  int Get(int, int) const;
 
   friend std::ostream& operator<<(std::ostream& os, Board& b) {
-    for (size_t y = 0; y < b.height; y++) {
-      for (size_t x = 0; x < b.width; x++) {
+    for (int y = 0; y < b.height; y++) {
+      for (int x = 0; x < b.width; x++) {
         os << b.Get(x, y) << " ";
       }
       os << std::endl;
