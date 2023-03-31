@@ -11,6 +11,7 @@ public:
   ~Board();
 
   const Board& operator=(const Board &);
+  const bool operator==(const Board &) const;
 
   constexpr int Width() const;
   constexpr int Height() const;

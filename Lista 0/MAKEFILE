@@ -1,3 +1,0 @@
-g++ -c main.cpp
-g++ -c wielomian.cpp
-g++ -o main.exe  main.o wielomian.o

@@ -5,6 +5,7 @@
 
 int main() {
   Board p1(3, 2); //y x
+  Board p4(3, 2); //y x
 
   std::cout << p1 << std::endl;
 

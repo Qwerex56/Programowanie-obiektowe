@@ -48,6 +48,21 @@ const Board& Board::operator=(const Board &b) {
   return *this;
 }
 
+const bool Board::operator==(const Board &b) const {
+  if (this->height != b.height || this->width != b.width) {
+    return false;
+  }
+
+  for (size_t y = 0; y < this->height; y++) {
+    for (size_t x = 0; x < this->width; x++) {
+      if (this->board[y][x] != b.board[y][x]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 constexpr int Board::Width() const {
   return width;
 }
