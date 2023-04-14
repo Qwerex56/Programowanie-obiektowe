@@ -34,9 +34,9 @@ namespace Lista4 {
   void CellularAutomata::iterate(int times) {
     Board copy = grid.cellGrid;
     
-    for (int y = 1; y < copy.Height() - 1; y++) {
-      for (int x = 1; x < copy.Width() - 1; x++) {
-        int state = copy.Get(x, y);
+    for (int y = 1; y < grid.cellGrid.Height() - 1; y++) {
+      for (int x = 1; x < grid.cellGrid.Width() - 1; x++) {
+        int state = grid.cellGrid.Get(x, y);
         if (state == q) {
           copy.Set(x, y, 1);
         } else if (state == 1) {

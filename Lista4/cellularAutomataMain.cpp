@@ -4,9 +4,9 @@
 
 
 int main(int argc, char *argv[]) {
-  Lista4::CellularAutomata ca = Lista4::CellularAutomata(40, 20, 9, 4, 7, 3);
+  Lista4::CellularAutomata ca = Lista4::CellularAutomata(40, 20, 9, 2, 3, 3);
 
-  for (int i = 0; i < 400; i++) {
+  for (int i = 0; i < 900; i++) {
     std::cout << "Iteration: " << i << std::endl;
     ca.iterate();
   }
