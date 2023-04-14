@@ -1,6 +1,6 @@
 #include <iostream>
-#include <windows.h>
-#include <conio.h>
+// #include <windows.h>
+// #include <conio.h>
 #include "plansza.h"
 
 int main() {

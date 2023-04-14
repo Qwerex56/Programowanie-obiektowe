@@ -1,5 +1,5 @@
-#include <windows.h>
-#include <conio.h>
+// #include <windows.h>
+// #include <conio.h>
 #include <iostream>
 #include <chrono>
 #include "wielomian.h"
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
             << horner << std::endl
             << equation;
 
-  _getch();
-  _getch();
+  // _getch();
+  // _getch();
   return EXIT_SUCCESS;
 }
