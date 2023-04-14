@@ -1,2 +1,0 @@
-g++ -c ../Lista1i2/plansza.cpp cellularAutomata.cpp cellularAutomataMain.cpp
-g++ -o caMain plansza.o cellularAutomata.o cellularAutomataMain.o
