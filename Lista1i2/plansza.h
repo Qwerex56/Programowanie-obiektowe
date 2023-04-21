@@ -18,6 +18,7 @@ public:
 
   void Set(int, int, int);
   int Get(int, int) const;
+  int **GetBoard() const { return this->board; }
 
   friend std::ostream& operator<<(std::ostream& os, Board& b) {
     for (int y = 0; y < b.height; y++) {

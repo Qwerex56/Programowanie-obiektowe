@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/qwere/Documents/Programowanie-obiektowe/Lista5",
-      "program": "c:/Users/qwere/Documents/Programowanie-obiektowe/Lista5/build/Debug/outDebug",
+      "cwd": "c:/Users/qwere/Documents/Programowanie-obiektowe/Lista4",
+      "program": "c:/Users/qwere/Documents/Programowanie-obiektowe/Lista4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -19,7 +19,7 @@ namespace Lista4 {
 
       for (int i = 0; i < c.cellGrid.Height(); i++) {
         for (int j = 0; j < c.cellGrid.Width(); j++) {
-            os << COLORS[c.cellGrid.Get(j, i)] << " ";
+            os << COLORS[c.cellGrid.Get(j, i) - 1] << " ";
           }
         os << std::endl;
       }

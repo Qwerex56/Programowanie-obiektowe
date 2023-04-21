@@ -1,4 +1,5 @@
 #include "./cellularAutomata.h"
+#include <random>
 
 #ifdef CELLULAR_AUTOMATA_HPP
 
@@ -49,7 +50,9 @@ namespace Lista4 {
           int c = countNeighboursState(x, y, Range(1, 1));
           int newState = (neighbourSum / (9 - c)) + g;
           copy.Set(x, y, newState);
-        } else if (state > q) {
+        }
+
+        if (copy.Get(x, y) > q) {
           copy.Set(x, y, q);
         }
       }
@@ -87,6 +90,11 @@ namespace Lista4 {
     srand(seed);
     for (int y = 0; y < cellGrid.Height(); y++) {
       for (int x = 0; x < cellGrid.Width(); x++) {
+        if ((x == 0 || x == cellGrid.Width() - 1) || (y == 0 || y == cellGrid.Height() - 1)) {
+          cellGrid.Set(x, y, 1);
+          continue;
+        }
+
         cellGrid.Set(x, y, (rand() % q) + 1);
       }
     }
