@@ -1,8 +1,10 @@
 #include <iostream>
 #include <conio.h>
-#include "./cellularAutomata.h"
+#include "./header/cellularAutomata.h"
 
 int main() {
+#ifdef _CELLULAR_AUTOMATA_H_
+  
   CA::CellularAutomata c{40, 20};
 
   std::cout << c << std::endl;
@@ -13,5 +15,7 @@ int main() {
   }
 
   _getch();
+
+#endif
   return EXIT_SUCCESS;
 }

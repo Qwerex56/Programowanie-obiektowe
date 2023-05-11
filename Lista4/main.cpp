@@ -1,4 +1,4 @@
-#include "./cellularAutomata.h"
+#include "./header/cellularAutomata.h"
 
 #include <iostream>
 #include <conio.h>
@@ -6,6 +6,7 @@
 
 
 int main(int argc, char *argv[]) {
+#ifdef CELLULAR_AUTOMATA_HPP
   Lista4::CellularAutomata ca = Lista4::CellularAutomata(60, 30, 9, 3, 2, 1);
 
   while (!_kbhit()) {
@@ -19,6 +20,6 @@ int main(int argc, char *argv[]) {
 
   _getch();
   _getch();
-
-  return 0;
+#endif
+  return EXIT_SUCCESS;
 }
