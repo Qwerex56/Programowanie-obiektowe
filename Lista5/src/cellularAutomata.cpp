@@ -1,4 +1,4 @@
-#include "../Lista5/cellularAutomata.h"
+#include "../header/cellularAutomata.h"
 
 CA::CellularAutomata::CellularAutomata(int x, int y) : Board(x, y) {
   randGrid();

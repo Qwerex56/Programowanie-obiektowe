@@ -1,4 +1,4 @@
-#include "./cellularAutomata.h"
+#include "../header/cellularAutomata.h"
 #include <random>
 
 #ifdef CELLULAR_AUTOMATA_HPP

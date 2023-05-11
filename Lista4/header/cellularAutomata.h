@@ -1,7 +1,7 @@
 #ifndef CELLULAR_AUTOMATA_HPP
 #define CELLULAR_AUTOMATA_HPP
 
-#include "../Lista1i2/plansza.h"
+#include "../../Lista1i2/header/plansza.h"
 #include <iostream>
 #include <vector>
 

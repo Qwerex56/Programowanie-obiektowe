@@ -2,8 +2,8 @@
 #define _CELLULAR_AUTOMATA_H_
 #include <iostream>
 
-#include "../Lista4/range.cpp"
-#include "../Lista1i2/plansza.h"
+#include "../../POLib/range.cpp"
+#include "../../Lista1i2/header/plansza.h"
 
 namespace CA {
   class CellularAutomata : protected Board {

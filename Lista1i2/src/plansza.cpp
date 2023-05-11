@@ -1,4 +1,4 @@
-#include "plansza.h"
+#include "../header/plansza.h"
 
 #ifdef PLANSZA_H
 
