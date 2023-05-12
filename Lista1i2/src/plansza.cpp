@@ -83,7 +83,7 @@ void Board::Set(int x, int y, int val) {
     Get(x, y);
   }
   catch(const std::exception& e) {
-    std::cerr << e.what() << '\n';
+    // std::cerr << e.what() << '\n';
     return;
   }
 
