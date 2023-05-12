@@ -1,6 +1,6 @@
 #include <iostream>
 #include <conio.h>
-#include "./header/cellularAutomata.h"
+#include "./src/cellularAutomata.cpp"
 
 int main() {
 #ifdef _CELLULAR_AUTOMATA_H_

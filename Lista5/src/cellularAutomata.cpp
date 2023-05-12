@@ -13,21 +13,31 @@ CA::CellularAutomata::CellularAutomata(int x, int y, int Q, int K1, int K2, int 
 }
 
 void CA::CellularAutomata::iterate() {
-  Board* copy = this;
+  Board copy = *this;
   PO::Range<int> range{};
 
   for (int y = 0; y < Height(); y++) {
     for (int x = 0; x < Width(); x++) {
-      int state = copy->Get(x, y);
+      int state;
+
+      try {
+        state = copy.Get(x, y);
+      }
+      catch(const std::exception& e) {
+        // std::cerr << e.what() << '\n';S
+        continue;
+      }
+      
+
       if (state == q) {
         state = 1;
       } else if (state == 1) {
-        int a = countNeighboursState(x, y, *copy, PO::Range<int>{2, q - 1});
-        int b = countNeighboursState(x, y, *copy, PO::Range<int>{q, q});
+        int a = countNeighboursState(x, y, copy, PO::Range<int>{2, q - 1});
+        int b = countNeighboursState(x, y, copy, PO::Range<int>{q, q});
         state = (a / k1) + (b / k2) + 1;
       } else if (range.isInRange(2, q - 1, state)) {
-        int sum = getStateSum(x, y, *copy);
-        int c = countNeighboursState(x, y, *copy, PO::Range<int>{1, 1});
+        int sum = getStateSum(x, y, copy);
+        int c = countNeighboursState(x, y, copy, PO::Range<int>{1, 1});
         state = (sum / (9 - c)) + g;
       }
 
@@ -44,15 +54,22 @@ int CA::CellularAutomata::countNeighboursState(int x, int y, Board& b, PO::Range
   int neighbours = 0;
   for (int v = y - 1; v < y + 1; v++) {
     for (int u = x - 1; u < x + 1; u++) {
-      int _u = (u + Width()) % Width();
-      int _v = (v + Height()) % Height();
+      // int _u = (u + Width()) % Width();
+      // int _v = (v + Height()) % Height();
 
-      if (_u == x && _v == y) {
+      if (u == x && v == y) {
         continue;
       }
 
-      if (r.isInRange(r.a, r.b, b.Get(_u, _v))) {
-        neighbours++;
+      try {
+        /* code */
+        if (r.isInRange(r.a, r.b, b.Get(u, v))) {
+          neighbours++;
+        }
+      }
+      catch (const std::exception &e) {
+        // std::cerr << e.what() << '\n';
+        continue;
       }
     }
   }
@@ -63,10 +80,16 @@ int CA::CellularAutomata::getStateSum(int x, int y, Board& b) const {
   int sum = 0;
   for (int v = y - 1; v <= y + 1; v++) {
     for (int u = x - 1; u <= x + 1; u++) {
-      int _u = (u + Width()) % Width();
-      int _v = (v + Height()) % Height();
+      // int _u = (u + Width()) % Width();
+      // int _v = (v + Height()) % Height();
 
-      sum += b.Get(_u, _v);
+      try {
+        sum += b.Get(u, v);
+      }
+      catch(const std::exception& e) {
+        // std::cerr << e.what() << '\n';
+        continue;
+      }
     }
   }
   return sum;

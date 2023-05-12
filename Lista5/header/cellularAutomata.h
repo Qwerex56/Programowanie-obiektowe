@@ -25,7 +25,6 @@ namespace CA {
                             'X'};
       for (int y = 0; y < ca.Height(); y++) {
         for (int x = 0; x < ca.Width(); x++) {
-          // os << ca.Get(x, y) << ' ';
           os << color[ca.Get(x, y)] << ' ';
         }
         os << '\n';
