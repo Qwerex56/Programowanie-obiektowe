@@ -1,0 +1,207 @@
+\doxysection{Board Class Reference}
+\hypertarget{class_board}{}\label{class_board}\index{Board@{Board}}
+
+
+\doxylink{class_board}{Board} is container for easy 2D int array manipulation.  
+
+
+
+
+{\ttfamily \#include $<$plansza.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_board}{Board} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board_a19e2c1f6c2baf8ab04cbd02f0cd2aebc}{Board}} (const \mbox{\hyperlink{class_board}{Board}} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board_a8e9136e683bad84d25e102763815f240}{Board}} (int, int)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_board}{Board} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_board_af73f45730119a1fd8f6670f53f959e68}\label{class_board_af73f45730119a1fd8f6670f53f959e68} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_board}{Board} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_board}{Board}} \& \mbox{\hyperlink{class_board_ac9d1dcfeaf6758caec5c64794e4cee25}{operator=}} (const \mbox{\hyperlink{class_board}{Board}} \&)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_a25dc029ef71e472a64ac2d17055037ab}{operator==}} (const \mbox{\hyperlink{class_board}{Board}} \&) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a64b8663177263f6369510f5ccf256163}{Width}} () const
+\begin{DoxyCompactList}\small\item\em Get board width dimension. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a03a5644a3a95c3e2a2a9c607eb6e3fa2}{Height}} () const
+\begin{DoxyCompactList}\small\item\em Get board height dimension. \end{DoxyCompactList}\item 
+\Hypertarget{class_board_ad53f7550a046b9f7ed6ab3eacd1aef2d}\label{class_board_ad53f7550a046b9f7ed6ab3eacd1aef2d} 
+void {\bfseries Set} (int, int, int)
+\begin{DoxyCompactList}\small\item\em Sets value in given position, or does nothing if is outside of board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a3df1a006340e52d4b72dea327e774d86}{Get}} (int, int) const
+\begin{DoxyCompactList}\small\item\em Gets value from given position. \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_board_a77a5d2f101eda092ad9b3660ac98699f}{Get\+Board}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_board}{Board} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_board_a071a65525e80c6b73cb2d8a0b1f3aabc}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_board}{Board}} \&b)
+\begin{DoxyCompactList}\small\item\em prints board in std\+::cin \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_board}{Board} is container for easy 2D int array manipulation. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_board}{Board} object. 
+
+\Hypertarget{class_board_a19e2c1f6c2baf8ab04cbd02f0cd2aebc}\label{class_board_a19e2c1f6c2baf8ab04cbd02f0cd2aebc} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constructs} & board from other board \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a8e9136e683bad84d25e102763815f240}\label{class_board_a8e9136e683bad84d25e102763815f240} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_board}{Board} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Constructs} & board with given dimensions \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_board_a3df1a006340e52d4b72dea327e774d86}\label{class_board_a3df1a006340e52d4b72dea327e774d86} 
+\index{Board@{Board}!Get@{Get}}
+\index{Get@{Get}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily int Board\+::\+Get (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets value from given position. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em outside} & of bounds\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+int -\/ value from given position 
+\end{DoxyReturn}
+\Hypertarget{class_board_a77a5d2f101eda092ad9b3660ac98699f}\label{class_board_a77a5d2f101eda092ad9b3660ac98699f} 
+\index{Board@{Board}!GetBoard@{GetBoard}}
+\index{GetBoard@{GetBoard}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{GetBoard()}{GetBoard()}}
+{\footnotesize\ttfamily int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Board\+::\+Get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \doxylink{class_board}{Board} object. 
+
+\begin{DoxyReturn}{Returns}
+int\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} return full board 
+\end{DoxyReturn}
+\Hypertarget{class_board_a03a5644a3a95c3e2a2a9c607eb6e3fa2}\label{class_board_a03a5644a3a95c3e2a2a9c607eb6e3fa2} 
+\index{Board@{Board}!Height@{Height}}
+\index{Height@{Height}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily int Board\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get board height dimension. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ board height 
+\end{DoxyReturn}
+\Hypertarget{class_board_ac9d1dcfeaf6758caec5c64794e4cee25}\label{class_board_ac9d1dcfeaf6758caec5c64794e4cee25} 
+\index{Board@{Board}!operator=@{operator=}}
+\index{operator=@{operator=}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_board}{Board}} \& Board\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Move constructor. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{class_board}{Board}\& 
+\end{DoxyReturn}
+\Hypertarget{class_board_a25dc029ef71e472a64ac2d17055037ab}\label{class_board_a25dc029ef71e472a64ac2d17055037ab} 
+\index{Board@{Board}!operator==@{operator==}}
+\index{operator==@{operator==}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Board\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator. 
+
+\begin{DoxyReturn}{Returns}
+true -\/ boards are equal to each other 
+
+false -\/ boards are not equal to each other 
+\end{DoxyReturn}
+\Hypertarget{class_board_a64b8663177263f6369510f5ccf256163}\label{class_board_a64b8663177263f6369510f5ccf256163} 
+\index{Board@{Board}!Width@{Width}}
+\index{Width@{Width}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily int Board\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get board width dimension. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ board width 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_board_a071a65525e80c6b73cb2d8a0b1f3aabc}\label{class_board_a071a65525e80c6b73cb2d8a0b1f3aabc} 
+\index{Board@{Board}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+prints board in std\+::cin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ ostream \\
+\hline
+{\em b} & -\/ board to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plansza.\+h\end{DoxyCompactItemize}
